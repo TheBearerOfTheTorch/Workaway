@@ -1,0 +1,21 @@
+{
+    "name": "vendor/workaway",
+    "description": "preparing for hackathon",
+    "type": "project",
+    "authors": [
+        {
+            "name": "andreas iithindi",
+            "email": "iithindia@gmail.com"
+        }
+    ],
+    "require": {
+        "pusher/pusher-php-server": "^4.1",
+        "phpmailer/phpmailer": "^6.1"
+    },
+    
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
