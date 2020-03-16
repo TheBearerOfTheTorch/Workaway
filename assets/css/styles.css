@@ -67,3 +67,22 @@
   background-color: #0069d9 !important;
 }
 
+#director_jobs:hover {
+  background-color: black;
+  color: white;
+  transition: all 1.3s;
+  border-radius: 4px;
+}
+
+#director_jobs_link:hover {
+  text-decoration: none !important;
+}
+
+#All_project_container {
+  display: none;
+}
+
+.navbar-brand.text-left.text-success {
+  color: rgb(0,0,0) !important;
+}
+

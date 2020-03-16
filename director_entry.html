@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Workaway</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg sticky-top bg-white text-center shadow-sm transparency border-bottom border-light" id="transmenu2" style="max-height: auto;min-height: 30px;">
+        <div class="container"><a class="navbar-brand text-left text-success" href="index.html" style="font-size: 25px;line-height: 54px;font-weight: bold;font-style: italic;font-family: 'Cutive Mono', monospace;letter-spacing: 3px;"><strong>Work Away</strong><p class="text-monospace text-center" style="font-size: 9px;letter-spacing: 4.3px;line-height: 0px;">Workers Place</p></a>
+            <button
+                data-toggle="collapse" class="navbar-toggler collapsed" data-target="#navcol-1"><span>MENU</span></button>
+                <div class="collapse navbar-collapse text-center" id="navcol-1">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="notification.html"><i class="far fa-bell" style="font-size: 23px;"></i></a></li>
+                        <li class="dropdown nav-item"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Profile</a>
+                            <div class="dropdown-menu text-center" role="menu"><a class="dropdown-item" role="presentation" href="graphics_design.html">Edit Profile</a><a class="dropdown-item" role="presentation" href="webdevelopment.html">Messages</a><a class="dropdown-item" role="presentation" href="mobileapp_dev.html">Logout</a></div>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    </nav>
+    <h1 class="text-center">Welcome Director, Do your work :)</h1>
+    <div class="container" style="margin-top: 150px;width: 100%;">
+        <div class="row">
+            <div class="col-md-3">
+                <a id="director_rejobs_link" href="#" style="color: black;" data-target="#add_employee" data-toggle="modal">
+                    <div class="text-center shadow" id="director_jobs" style="width: 100%;height: 100%;padding: 10px;"><i class="fas fa-user-plus" style="font-size: 82px;"></i>
+                        <p style="margin-top: 10px;"><strong>Add Employee</strong></p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a id="director_jobs_link" href="#" style="color: black;" data-target="#director_leader_assign" data-toggle="modal">
+                    <div class="text-center shadow" id="director_jobs" style="width: 100%;height: 100%;padding: 10px;"><i class="far fa-user" style="font-size: 82px;"></i>
+                        <p style="margin-top: 10px;"><strong>Assign Job</strong></p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a id="director_rejobs_link" href="#" style="color: black;" data-target="#director_leader_reassign" data-toggle="modal">
+                    <div class="text-center shadow" id="director_jobs" style="width: 100%;height: 100%;padding: 10px;"><i class="far fa-user" style="font-size: 82px;"></i>
+                        <p style="margin-top: 10px;"><strong>Re-Assign Job</strong></p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a id="director_all_jobs_link" href="#" style="color: black;">
+                    <div class="text-center shadow" id="director_jobs" style="width: 100%;height: 100%;padding: 10px;"><i class="far fa-list-alt" style="font-size: 82px;"></i>
+                        <p style="margin-top: 10px;"><strong>View All Projects</strong></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="All_project_container">
+        <div style="margin-top: 10px;">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Project Name</th>
+                            <th>Number Of Members</th>
+                            <th>Project Progress</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center" id="project_name"><a href="#"><strong>Java Development</strong></a></td>
+                            <td class="text-center" id="project_members">3</td>
+                            <td class="text-center" id="project_progress">50%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="director_leader_assign" style="margin-top: 70px;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-center" style="width: 100%;">Assign Project Leader</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <form><input class="form-control" type="text" placeholder="Enter Project Name" style="margin-bottom: 10px;" required="" name="leader_pro_name"><input class="form-control" type="text" placeholder="Enter Leader Name" style="margin-bottom: 10px;"
+                            required="" name="leader_emp_name"><input class="form-control" type="tel" required="" minlength="4" maxlength="4" name="leader_emp_id" placeholder="Enter Employee ID" style="margin-bottom: 10px;">
+                        <p style="margin-bottom: 0px;font-size: 14px;">Choose Project timeframe</p><input class="form-control" type="datetime-local" style="width: 100%;margin-bottom: 10px;" required="" name="date_timeframe" value="time_frame"><input class="form-control" type="number" placeholder="Project Member Limit"
+                            required=""></form>
+                </div>
+                <div class="modal-footer"><button class="btn btn-primary btn-block" type="submit">Save</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="director_leader_reassign" style="margin-top: 70px;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-center" style="width: 100%;">Re-Assign Project Leader</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <form><input class="form-control" type="text" placeholder="Enter Project Name" style="margin-bottom: 10px;" required="" name="leader_pro_name"><input class="form-control" type="text" placeholder="Enter Previous Leader Name" style="margin-bottom: 10px;"
+                            required="" name="leader_emp_name"><input class="form-control" type="text" placeholder="Enter Re-Assign Leader Name" style="margin-bottom: 10px;" required="" name="leader_emp_name"><input class="form-control" type="tel" placeholder="Enter Employee ID"
+                            name="leader_emp_id" required="" minlength="4" maxlength="4">
+                        <p style="margin-bottom: 0px;font-size: 14px;">Choose Project timeframe</p><input class="form-control" type="datetime-local" style="width: 100%;margin-bottom: 10px;" required="" name="date_timeframe" value="time_frame"><input class="form-control" type="number" placeholder="Project Member Limit"
+                            required=""></form>
+                </div>
+                <div class="modal-footer"><button class="btn btn-primary btn-block" type="submit">Save</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="add_employee" style="margin-top: 70px;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-center" style="width: 100%;">Add Employee To The Company</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <form><input class="form-control" type="tel" placeholder="Enter Employee ID" required="" minlength="4" maxlength="4" style="margin-bottom: 10px;"><input class="form-control" type="text" placeholder="Enter Employee Name" style="margin-bottom: 10px;"
+                            required="" name="emp_name"><input class="form-control" type="text" placeholder="Enter Department Name" style="margin-bottom: 10px;" required="" name="dep_name" minlength="4" maxlength="4">
+                        <div class="dropdown"><button class="btn btn-outline-primary btn-block dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="margin-bottom: 10px;">Position</button>
+                            <div class="dropdown-menu text-center" role="menu" style="width: 100%;"><a class="dropdown-item" role="presentation" href="#">Project Manager</a><a class="dropdown-item" role="presentation" href="#">Team Members</a></div>
+                        </div><input class="form-control" type="email" name="emp_email" placeholder="Enter Employee Email" style="margin-bottom: 10PX;" required=""><input class="form-control" type="password" placeholder="Enter Employee Password" name="emp_password"
+                            style="margin-bottom: 10px;" required=""><input class="form-control" type="password" placeholder="Confirm Employee Password" name="emp_password" required=""></form>
+                </div>
+                <div class="modal-footer"><button class="btn btn-primary btn-block" type="submit">Save</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="assets/js/Animatecss--Wowjs.js"></script>
+    <script src="assets/js/show_project_div.js"></script>
+</body>
+
+</html>
