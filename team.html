@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Workaway</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/countdown-timer-1.css">
+    <link rel="stylesheet" href="assets/css/countdown-timer.css">
+    <link rel="stylesheet" href="assets/css/Custom-File-Upload.css">
+    <link rel="stylesheet" href="assets/css/Drag--Drop-Upload-Form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg sticky-top bg-white text-center shadow-sm transparency border-bottom border-light" id="transmenu2" style="max-height: auto;min-height: 30px;">
+        <div class="container"><a class="navbar-brand text-left text-success" href="index.html" style="font-size: 25px;line-height: 54px;font-weight: bold;font-style: italic;font-family: 'Cutive Mono', monospace;letter-spacing: 3px;"><strong>Work Away</strong><p class="text-monospace text-center" style="font-size: 9px;letter-spacing: 4.3px;line-height: 0px;">Workers Place</p></a>
+            <button
+                data-toggle="collapse" class="navbar-toggler collapsed" data-target="#navcol-1"><span>MENU</span></button>
+                <div class="collapse navbar-collapse text-center" id="navcol-1">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="notification.html"><i class="far fa-bell" style="font-size: 23px;"></i></a></li>
+                        <li class="dropdown nav-item"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Profile</a>
+                            <div class="dropdown-menu text-center" role="menu"><a class="dropdown-item" role="presentation" href="graphics_design.html">Edit Profile</a><a class="dropdown-item" role="presentation" href="webdevelopment.html">Messages</a><a class="dropdown-item" role="presentation" href="mobileapp_dev.html">Logout</a></div>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    </nav>
+    <h1 class="text-center">Welcome Member, Do your work&nbsp;<i class="fa fa-smile-o"></i></h1>
+    <div class="container" style="margin-top: 150px;width: 100%;">
+        <div class="row">
+            <div class="col-md-3">
+                <a id="leader_jobs_link" href="#" style="color: black;" data-target="#upload_file_modal" data-toggle="modal">
+                    <div class="text-center shadow" id="director_jobs" style="width: 100%;height: 100%;padding: 10px;"><i class="fas fa-upload" style="font-size: 82px;"></i>
+                        <p style="margin-top: 10px;"><strong>Upload File</strong></p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a id="director_all_jobs_link" href="#" style="color: black;">
+                    <div class="text-center shadow" id="director_jobs" style="width: 100%;height: 100%;padding: 10px;"><i class="far fa-list-alt" style="font-size: 82px;"></i>
+                        <p style="margin-top: 10px;"><strong>View Progress</strong></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="All_project_container">
+        <div style="margin-top: 10px;">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Project Name</th>
+                            <th>Deadline</th>
+                            <th>Last Uploaded File</th>
+                            <th>Project Progress</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center" id="project_name"><a href="#"><strong>Java Development</strong></a></td>
+                            <td class="text-center" id="project_deadine" style="padding: 0px;">
+                                <div id="clockdiv">
+                                    <div class="clock-wrapper" style="height: 67px;background-color: rgba(0,129,106,0);"><span class="days" style="background-color: rgba(0,129,106,0);"> </span>
+                                        <div class="smalltext">
+                                            <p style="font-size: 10px;">Days </p>
+                                        </div>
+                                    </div>
+                                    <div class="clock-wrapper" style="height: 67px;background-color: rgba(0,129,106,0);"><span class="hours" style="background-color: rgba(0,129,106,0);"> </span>
+                                        <div class="smalltext">
+                                            <p style="font-size: 10px;">Hours </p>
+                                        </div>
+                                    </div>
+                                    <div class="clock-wrapper" style="height: 67px;background-color: rgba(0,129,106,0);"><span class="minutes" style="background-color: rgba(0,129,106,0);"> </span>
+                                        <div class="smalltext">
+                                            <p style="font-size: 10px;">Minutes </p>
+                                        </div>
+                                    </div>
+                                    <div class="clock-wrapper" style="height: 67px;background-color: rgba(0,129,106,0);"><span class="seconds" style="background-color: rgba(0,129,106,0);"> </span>
+                                        <div class="smalltext">
+                                            <p style="font-size: 10px;">Seconds </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center" id="project_members"><a href="#">workarthon.jpg</a></td>
+                            <td class="text-center" id="project_progress" style="padding-top: 18px;">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">50%</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="upload_file_modal" style="margin-top: 70px;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-center" style="width: 100%;">Upload File</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <div>
+                        <p id="emp_name" style="width: 100%;">Maikano</p>
+                    </div>
+                    <form><input class="form-control" type="tel" required="" minlength="4" maxlength="4" name="project_emp_id" placeholder="Enter Project ID" style="margin-bottom: 10px;"></form>
+                    <form>
+                        <div style="width: 200px;"><input type="file" id="user_group_logo" class="custom-file-input" name="user_group_logo">
+                            <div class="text-center"><label id="user_group_label" for="user_group_logo"><i class="fas fa-upload"></i>&nbsp;Choose an image...</label></div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer"><button class="btn btn-primary btn-block" type="submit">Save</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="assets/js/Animatecss--Wowjs.js"></script>
+    <script src="assets/js/countdown-timer.js"></script>
+    <script src="assets/js/Custom-File-Upload.js"></script>
+    <script src="assets/js/show_project_div.js"></script>
+</body>
+
+</html>

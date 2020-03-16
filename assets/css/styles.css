@@ -84,7 +84,7 @@
 }
 
 #All_project_container {
-  display: none;
+  display: block;
 }
 
 .navbar-brand.text-left.text-success {
@@ -92,6 +92,6 @@
 }
 
 #review_project_container {
-  display: none;
+  display: block;
 }
 
