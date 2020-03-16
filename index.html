@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Workaway</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -43,14 +46,34 @@
     </div>
     <div class="carousel slide carousel-fade" data-ride="carousel" id="carousel-1" style="height: 100vh;position: fixed;width: 100%;min-width: 100%;max-width: 100%;">
         <div class="carousel-inner" role="listbox" id="slides-1" style="height: 100vh;width: 100%;position: fixed;min-width: 100%;max-width: 100%;">
-            <div class="carousel-item float-right" id="slide-1" style="height: 100vh;min-width: 100%;max-width: 100%;width: 100%;position: fixed;margin-right: 0px;">
-                <div class="float-right" style="width: 80%;position: absolute;background-color: rgba(188,12,12,0);height: 70px;padding-top: 20px;"><a class="float-right" id="login_link" href="#" data-target="#login_modal" data-toggle="modal">Login</a></div>
+            <div class="carousel-item active float-right" id="slide-1" style="height: 100vh;min-width: 100%;max-width: 100%;width: 100%;position: fixed;margin-right: 0px;">
+                <nav class="navbar navbar-light navbar-expand-lg sticky-top bg-white text-center shadow-sm transparency border-bottom border-light" id="transmenu2" style="max-height: auto;min-height: 30px;">
+                    <div class="container"><a class="navbar-brand text-left text-success" href="index.html" style="font-size: 25px;line-height: 54px;font-weight: bold;font-style: italic;font-family: 'Cutive Mono', monospace;letter-spacing: 3px;"><strong>Work Away</strong><p class="text-monospace text-center" style="font-size: 9px;letter-spacing: 4.3px;line-height: 0px;">Workers Place</p></a>
+                        <button
+                            data-toggle="collapse" class="navbar-toggler collapsed" data-target="#navcol-1"><span>MENU</span></button>
+                            <div class="collapse navbar-collapse text-center" id="navcol-1">
+                                <ul class="nav navbar-nav ml-auto">
+                                    <li class="nav-item" role="presentation"><a class="nav-link float-right" id="login_link" href="#" data-target="#login_modal" data-toggle="modal">Login</a></li>
+                                </ul>
+                            </div>
+                    </div>
+                </nav>
                 <div class="text-center float-right" id="animation_div" style="background-color: rgba(188,12,12,0);">
                     <h1 id="welcome_heading" class="wow slideInLeft" style="animation-delay: 0.2s;animation-duration: 2.6s;color: white;font-size: 70px;">What Is Work Away?</h1>
                     <p id="welcome_paragraph" class="wow slideInRight" style="animation-delay: 0.7s;animation-duration: 2.6s;color: white;font-size: 23px;">Paragraph</p>
                 </div><img class="w-100 d-block" id="welcome_image" src="assets/img/nesa-by-makers-IgUR1iX0mqM-unsplash.jpg" alt="Slide Image" style="height: 100vh;width: 100%;min-width: 100%;max-width: 100%;"></div>
-            <div class="carousel-item active float-right" id="slide-1" style="height: 100vh;min-width: 100%;max-width: 100%;width: 100%;position: fixed;margin-right: 0px;">
-                <div class="float-right" style="width: 80%;position: absolute;background-color: rgba(188,12,12,0);height: 70px;padding-top: 20px;"><a class="float-right" id="login_link" href="#" data-target="#login_modal" data-toggle="modal">Login</a></div>
+            <div class="carousel-item float-right" id="slide-1" style="height: 100vh;min-width: 100%;max-width: 100%;width: 100%;position: fixed;margin-right: 0px;">
+                <nav class="navbar navbar-light navbar-expand-lg sticky-top bg-white text-center shadow-sm transparency border-bottom border-light" id="transmenu2" style="max-height: auto;min-height: 30px;">
+                    <div class="container"><a class="navbar-brand text-left text-success" href="index.html" style="font-size: 25px;line-height: 54px;font-weight: bold;font-style: italic;font-family: 'Cutive Mono', monospace;letter-spacing: 3px;"><strong>Work Away</strong><p class="text-monospace text-center" style="font-size: 9px;letter-spacing: 4.3px;line-height: 0px;">Workers Place</p></a>
+                        <button
+                            data-toggle="collapse" class="navbar-toggler collapsed" data-target="#navcol-1"><span>MENU</span></button>
+                            <div class="collapse navbar-collapse text-center" id="navcol-1">
+                                <ul class="nav navbar-nav ml-auto">
+                                    <li class="nav-item" role="presentation"><a class="nav-link float-right" id="login_link" href="#" data-target="#login_modal" data-toggle="modal">Login</a></li>
+                                </ul>
+                            </div>
+                    </div>
+                </nav>
                 <div class="text-center float-right" id="animation_div" style="background-color: rgba(188,12,12,0);">
                     <h1 id="welcome_heading" class="wow slideInDown" style="animation-delay: 0.2s;animation-duration: 2.6s;color: white;font-size: 70px;">What Is Work Away?</h1>
                     <p id="welcome_paragraph" class="wow fadeInUp" style="animation-delay: 0.7s;animation-duration: 2.6s;color: white;font-size: 23px;">Paragraph</p>
@@ -62,6 +85,7 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="assets/js/Animatecss--Wowjs.js"></script>
+    <script src="assets/js/show_project_div.js"></script>
 </body>
 
 </html>
