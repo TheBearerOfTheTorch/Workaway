@@ -28,20 +28,13 @@
                 </div>
         </div>
     </nav>
-    <h1 class="text-center">Welcome Director, Do your work :)</h1>
+    <h1 class="text-center">Welcome Team Leader, Do your work&nbsp;<i class="fa fa-smile-o"></i></h1>
     <div class="container" style="margin-top: 150px;width: 100%;">
         <div class="row">
             <div class="col-md-3">
-                <a id="director_rejobs_link" href="#" style="color: black;" data-target="#add_employee" data-toggle="modal">
-                    <div class="text-center shadow" id="director_jobs" style="width: 100%;height: 100%;padding: 10px;"><i class="fas fa-user-plus" style="font-size: 82px;"></i>
-                        <p style="margin-top: 10px;"><strong>Add Employee</strong></p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a id="director_jobs_link" href="#" style="color: black;" data-target="#director_leader_assign" data-toggle="modal">
-                    <div class="text-center shadow" id="director_jobs" style="width: 100%;height: 100%;padding: 10px;"><i class="far fa-user" style="font-size: 82px;"></i>
-                        <p style="margin-top: 10px;"><strong>Assign Job</strong></p>
+                <a id="leader_jobs_link" href="#" style="color: black;" data-target="#leader_assign_employee" data-toggle="modal">
+                    <div class="text-center shadow" id="director_jobs" style="width: 100%;height: 100%;padding: 10px;"><i class="far fa-edit" style="font-size: 82px;"></i>
+                        <p style="margin-top: 10px;"><strong>Assign Task</strong></p>
                     </div>
                 </a>
             </div>
@@ -55,7 +48,14 @@
             <div class="col-md-3">
                 <a id="director_all_jobs_link" href="#" style="color: black;">
                     <div class="text-center shadow" id="director_jobs" style="width: 100%;height: 100%;padding: 10px;"><i class="far fa-list-alt" style="font-size: 82px;"></i>
-                        <p style="margin-top: 10px;"><strong>View All Projects</strong></p>
+                        <p style="margin-top: 10px;"><strong>View Assigned Projects</strong></p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a id="review_all_work_link" href="#" style="color: black;">
+                    <div class="text-center shadow" id="director_jobs" style="width: 100%;height: 100%;padding: 10px;"><i class="far fa-check-square" style="font-size: 82px;"></i>
+                        <p style="margin-top: 10px;"><strong>Review Members Work</strong></p>
                     </div>
                 </a>
             </div>
@@ -68,6 +68,7 @@
                     <thead>
                         <tr>
                             <th>Project Name</th>
+                            <th>Deadline</th>
                             <th>Number Of Members</th>
                             <th>Project Progress</th>
                         </tr>
@@ -75,6 +76,7 @@
                     <tbody>
                         <tr>
                             <td class="text-center" id="project_name"><a href="#"><strong>Java Development</strong></a></td>
+                            <td class="text-center" id="project_deadine"><input id="project_deadine" type="date" disabled="" name="pr_deadine" style="border: none;background-color: white;color: black;"></td>
                             <td class="text-center" id="project_members">3</td>
                             <td class="text-center" id="project_progress" style="padding-top: 18px;">
                                 <div class="progress">
@@ -87,17 +89,49 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" role="dialog" tabindex="-1" id="director_leader_assign" style="margin-top: 70px;">
+    <div class="container" id="review_project_container">
+        <div style="margin-top: 10px;">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Project Name</th>
+                            <th>Member Name</th>
+                            <th>Due Date</th>
+                            <th>Recent Uploaded File</th>
+                            <th>Project Progress</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center" id="project_name">Java Development</td>
+                            <td class="text-center" id="project_name">Maikano Bagwasi</td>
+                            <td class="text-center" id="project_deadine"><input id="project_due" type="date" disabled="" name="pr_deadine" style="border: none;background-color: white;color: black;"></td>
+                            <td class="text-center" id="project_name"><a href="#"><strong>workathon.jpg</strong></a></td>
+                            <td class="text-center" id="project_progress" style="padding-top: 18px;">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">50%</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="leader_assign_employee" style="margin-top: 70px;">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title text-center" style="width: 100%;">Assign Project Leader</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                    <h4 class="modal-title text-center" style="width: 100%;">Assign Employee</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
                 <div class="modal-body">
-                    <form><input class="form-control" type="tel" required="" minlength="4" maxlength="4" name="project_id" placeholder="Enter Project ID" style="margin-bottom: 10px;"><input class="form-control" type="text" placeholder="Enter Project Name" style="margin-bottom: 10px;"
-                            required="" name="leader_pro_name"><input class="form-control" type="text" placeholder="Enter Leader Name" style="margin-bottom: 10px;" required="" name="leader_emp_name"><input class="form-control" type="tel" required="" minlength="4"
-                            maxlength="4" name="leader_emp_id" placeholder="Enter Employee ID" style="margin-bottom: 10px;">
-                        <p style="margin-bottom: 0px;font-size: 14px;">Choose Project timeframe</p><input class="form-control" type="datetime-local" style="width: 100%;margin-bottom: 10px;" required="" name="date_timeframe" value="time_frame"><input class="form-control" type="number" placeholder="Project Member Limit"
-                            required="" min="1" max="25"></form>
+                    <div>
+                        <p>Member limit:&nbsp;<span id="current_members">5</span><span>/</span><span id="member_limited">7</span></p>
+                    </div>
+                    <form><input class="form-control" type="tel" required="" minlength="4" maxlength="4" name="leader_emp_id" placeholder="Enter Project ID" style="margin-bottom: 10px;"><input class="form-control" type="text" placeholder="Enter Project Name"
+                            style="margin-bottom: 10px;" required="" name="leader_pro_name"><input class="form-control" type="tel" required="" minlength="4" maxlength="4" name="leader_emp_id" placeholder="Enter Employee ID" style="margin-bottom: 10px;">
+                        <p
+                            style="margin-bottom: 0px;font-size: 14px;">Choose Task timeframe</p><input class="form-control" type="datetime-local" style="width: 100%;margin-bottom: 10px;" required="" name="task_timeframe" value="task_time_frame"></form>
                 </div>
                 <div class="modal-footer"><button class="btn btn-primary btn-block" type="submit">Save</button></div>
             </div>
@@ -109,11 +143,11 @@
                 <div class="modal-header">
                     <h4 class="modal-title text-center" style="width: 100%;">Re-Assign Project Leader</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
                 <div class="modal-body">
-                    <form><input class="form-control" type="tel" required="" minlength="4" maxlength="4" name="project_id" placeholder="Enter Project ID" style="margin-bottom: 10px;"><input class="form-control" type="text" placeholder="Enter Project Name" style="margin-bottom: 10px;"
-                            required="" name="leader_pro_name"><input class="form-control" type="text" placeholder="Enter Previous Leader Name" style="margin-bottom: 10px;" required="" name="leader_emp_name"><input class="form-control" type="text" placeholder="Enter Re-Assign Leader Name"
-                            style="margin-bottom: 10px;" required="" name="leader_emp_name"><input class="form-control" type="tel" placeholder="Enter Employee ID" name="leader_emp_id" required="" minlength="4" maxlength="4">
+                    <form><input class="form-control" type="text" placeholder="Enter Project Name" style="margin-bottom: 10px;" required="" name="leader_pro_name"><input class="form-control" type="text" placeholder="Enter Previous Leader Name" style="margin-bottom: 10px;"
+                            required="" name="leader_emp_name"><input class="form-control" type="text" placeholder="Enter Re-Assign Leader Name" style="margin-bottom: 10px;" required="" name="leader_emp_name"><input class="form-control" type="tel" placeholder="Enter Employee ID"
+                            name="leader_emp_id" required="" minlength="4" maxlength="4">
                         <p style="margin-bottom: 0px;font-size: 14px;">Choose Project timeframe</p><input class="form-control" type="datetime-local" style="width: 100%;margin-bottom: 10px;" required="" name="date_timeframe" value="time_frame"><input class="form-control" type="number" placeholder="Project Member Limit"
-                            required="" min="1" max="25"></form>
+                            required=""></form>
                 </div>
                 <div class="modal-footer"><button class="btn btn-primary btn-block" type="submit">Save</button></div>
             </div>
