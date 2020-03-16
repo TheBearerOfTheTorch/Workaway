@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Workaway</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div class="modal fade" role="dialog" tabindex="-1" id="login_modal" style="margin-top: 100px;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login Modal</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body text-center">
+                    <div>
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item"><a class="nav-link active" role="tab" data-toggle="tab" href="#tab-1">Login As Employee</a></li>
+                            <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-2">Login As Employer<br></a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" role="tabpanel" id="tab-1">
+                                <form><input class="form-control" type="email" style="margin-bottom: 10px;margin-top: 10px;" placeholder="Enter Email"><input class="form-control" type="password" style="margin-bottom: 10px;" placeholder="Enter Password">
+                                    <button
+                                        class="btn btn-primary" type="submit">Login</button>
+                                </form>
+                            </div>
+                            <div class="tab-pane" role="tabpanel" id="tab-2">
+                                <form><input class="form-control" type="email" style="margin-bottom: 10px;margin-top: 10px;" placeholder="Enter Company Email"><input class="form-control" type="number" placeholder="Enter Your Assigned Company ID" style="margin-bottom: 10px;">
+                                    <input
+                                        class="form-control" type="password" style="margin-bottom: 10px;" placeholder="Enter Your Password"><button class="btn btn-primary" type="submit">Login</button></form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div class="carousel slide carousel-fade" data-ride="carousel" id="carousel-1" style="height: 100vh;position: fixed;width: 100%;min-width: 100%;max-width: 100%;">
+        <div class="carousel-inner" role="listbox" id="slides-1" style="height: 100vh;width: 100%;position: fixed;min-width: 100%;max-width: 100%;">
+            <div class="carousel-item float-right" id="slide-1" style="height: 100vh;min-width: 100%;max-width: 100%;width: 100%;position: fixed;margin-right: 0px;">
+                <div class="float-right" style="width: 80%;position: absolute;background-color: rgba(188,12,12,0);height: 70px;padding-top: 20px;"><a class="float-right" id="login_link" href="#" data-target="#login_modal" data-toggle="modal">Login</a></div>
+                <div class="text-center float-right" id="animation_div" style="background-color: rgba(188,12,12,0);">
+                    <h1 id="welcome_heading" class="wow slideInLeft" style="animation-delay: 0.2s;animation-duration: 2.6s;color: white;font-size: 70px;">What Is Work Away?</h1>
+                    <p id="welcome_paragraph" class="wow slideInRight" style="animation-delay: 0.7s;animation-duration: 2.6s;color: white;font-size: 23px;">Paragraph</p>
+                </div><img class="w-100 d-block" id="welcome_image" src="assets/img/nesa-by-makers-IgUR1iX0mqM-unsplash.jpg" alt="Slide Image" style="height: 100vh;width: 100%;min-width: 100%;max-width: 100%;"></div>
+            <div class="carousel-item active float-right" id="slide-1" style="height: 100vh;min-width: 100%;max-width: 100%;width: 100%;position: fixed;margin-right: 0px;">
+                <div class="float-right" style="width: 80%;position: absolute;background-color: rgba(188,12,12,0);height: 70px;padding-top: 20px;"><a class="float-right" id="login_link" href="#" data-target="#login_modal" data-toggle="modal">Login</a></div>
+                <div class="text-center float-right" id="animation_div" style="background-color: rgba(188,12,12,0);">
+                    <h1 id="welcome_heading" class="wow slideInDown" style="animation-delay: 0.2s;animation-duration: 2.6s;color: white;font-size: 70px;">What Is Work Away?</h1>
+                    <p id="welcome_paragraph" class="wow fadeInUp" style="animation-delay: 0.7s;animation-duration: 2.6s;color: white;font-size: 23px;">Paragraph</p>
+                </div><img class="w-100 d-block" id="welcome_image" src="assets/img/workaway_background.jpg" alt="Slide Image" style="height: 100vh;width: 100%;min-width: 100%;max-width: 100%;"></div>
+        </div>
+        <div style="min-height: 90vh;max-height: 90vh;"><a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev"><span class="carousel-control-prev-icon"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-slide="next"><span class="carousel-control-next-icon"></span><span class="sr-only">Next</span></a></div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="assets/js/Animatecss--Wowjs.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+#login_link {
+  color: black;
+  background-color: white;
+  padding: 5px;
+  width: 100px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+#login_link:hover {
+  opacity: 0.6;
+  border-radius: 6px;
+}
+
+#animation_div {
+  width: 100%;
+  position: absolute;
+  background-color: #bc0c0c;
+  height: 100%;
+  padding-top: 210px;
+  margin-top: 60px;
+}
+
+@media (max-width: 540px) {
+  #animation_div {
+    padding-top: 70px !important;
+  }
+}
+
+@media (max-width: 540px) {
+  #welcome_paragraph {
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 540px) {
+  #welcome_heading {
+    font-size: 50px !important;
+  }
+}
+
+@media (max-width: 540px) {
+  #welcome_image {
+    height: 70vh !important;
+  }
+}
+
+@media (max-width: 540px) {
+  #carousel-1 {
+    height: 70vh !important;
+  }
+}
+
+@media (max-width: 540px) {
+  #slides-1 {
+    height: 70vh !important;
+  }
+}
+
+@media (max-width: 540px) {
+  #slide-1 {
+    height: 70vh !important;
+  }
+}
+
+#view_reg_com:hover {
+  background-color: #0069d9 !important;
+}
+
